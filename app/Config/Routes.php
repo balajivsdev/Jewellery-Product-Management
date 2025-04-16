@@ -5,11 +5,11 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
 
 $routes->group('',['filter' => 'AlreadyLoggedIn'], function ($routes) {
     $routes->get('/register', 'AuthController::register');
 $routes->post('/register/save', 'AuthController::register_save');
+$routes->get('/', 'AuthController::login');
 
 $routes->get('/login', 'AuthController::login');
 $routes->post('/login', 'AuthController::check_login');
