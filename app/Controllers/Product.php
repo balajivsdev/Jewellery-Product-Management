@@ -75,6 +75,10 @@ class Product extends BaseController
         $imageModel = new ProductImageModel();
         $data['product'] = $model->find($id);
 
+        if (!$data['product']) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Product with ID $id not found.");
+        }
+
         $data['product_image'] = $this->db->table('product_images')->where('product_id',$id)->get()->getResult();
         
         echo view('layouts/header', $data);
@@ -88,6 +92,12 @@ class Product extends BaseController
         $productModel = new ProductModel();
         $imageModel = new ProductImageModel();
         $validation = \Config\Services::validation();
+
+        $data['product'] = $productModel->find($id);
+
+        if (!$data['product']) {
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("Product with ID $id not found.");
+        }
 
         if (!$this->validate([
             'name' => 'required',
