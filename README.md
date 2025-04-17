@@ -74,7 +74,7 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 
 - After, change the env file to .env and configure the database.
 
-- Open the terminal and run the command 'composer install' to update vendor and dependencies. 
+- Open the terminal and run the command 'composer install' or 'composer update' to update vendor and dependencies. 
 
 - Run this SQL Statement to create the database in my sql CREATE DATABASE jewellery_product_management;
 
