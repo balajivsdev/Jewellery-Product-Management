@@ -66,3 +66,21 @@ Additionally, make sure that the following extensions are enabled in your PHP:
 - json (enabled by default - don't turn it off)
 - [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
 - [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+
+
+## Setup Jewellery Product Management 
+
+- Download this package as the zip or clone it into your system.
+
+- After, change the env file to .env and configure the database.
+
+- Open the terminal and run the command 'composer install' to update vendor and dependencies. 
+
+- Run this SQL Statement to create the database in my sql CREATE DATABASE jewellery_product_management;
+
+- After creation of database kindly run this command in the terminal to insert the tables 'php spark migrate'.
+
+- Then, need to run the command to start the server 'php spark serve'.
+
+- Visit http://localhost:8080 in your browser to access the app.
+
