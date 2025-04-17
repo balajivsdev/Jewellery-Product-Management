@@ -3,7 +3,7 @@
         <div class="col-md-6">
             <div class="card shadow">
                 <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">Create Product</h4>
+                    <h4 class="mb-0">Edit Product</h4>
                 </div>
                 <div class="card-body">
                     <form method="post" action="<?php echo site_url('product/update/'.$product['id']); ?>" enctype="multipart/form-data">
@@ -48,7 +48,7 @@
                                 <?php endforeach; ?>
                             </div>
                         
-                        <button type="submit" class="btn btn-primary w-100">Save</button>
+                        <button type="submit" class="btn btn-primary w-100">Update</button>
                     </form>
                 </div>
             </div>
