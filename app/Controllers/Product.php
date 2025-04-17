@@ -136,8 +136,6 @@ class Product extends BaseController
         $product_delete = $productModel->find($id);
 
         if($product_delete){
-            // 
-
             $product_image_data = $this->general_model->fetch_data('product_images',array('product_id'=>$id));
 
             if (!empty($product_image_data)) {
@@ -169,7 +167,6 @@ class Product extends BaseController
 
         if(!empty($product_image_data[0]->images)){
             unlink('./uploads/'.$product_image_data[0]->images);
-            // unlink(FCPATH . 'uploads/' . $image['images']);
         }
         $this->general_model->delete_condition('product_images',array('id'=>$imageId,'product_id'=>$product_id));
         

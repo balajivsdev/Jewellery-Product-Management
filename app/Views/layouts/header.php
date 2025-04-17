@@ -38,15 +38,7 @@ if ($segment == 'register') {
     </button>
     
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <!-- Left Side Nav Links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <!-- <a class="nav-link" href="/dashboard">Dashboard</a> -->
-        </li>
-       
-      </ul>
 
-      <!-- Right Side: Session Name & Logout -->
       <ul class="navbar-nav ms-auto align-items-center">
     <?php if (session()->get('logged_in')): ?>
         <li class="nav-item">
